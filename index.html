@@ -250,6 +250,147 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/html-audio-video-ps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xuejun blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/17/html-audio-video-ps/" itemprop="url">
+                  html-audio-video-ps
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T13:26:29+08:00">
+                2017-04-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="audio-video-生命周期"><a href="#audio-video-生命周期" class="headerlink" title="audio/video 生命周期"></a>audio/video <a href="http://javascript.ruanyifeng.com/htmlapi/elements.html" target="_blank" rel="external">生命周期</a></h3><ul>
+<li>loadstart：开始加载音频和视频。</li>
+<li>durationchange：音频和视频的duration属性（时长）发生变化时触发，即已经知道媒体文件的长度。如果没有指定音频和视频文件，duration属性等于NaN。如果播放流媒体文件，没有明确的结束时间，duration属性等于Inf（Infinity）。</li>
+<li>loadedmetadata：媒体文件的元数据加载完毕时触发，元数据包括duration（时长）、dimensions（大小，视频独有）和文字轨。</li>
+<li>loadeddata：媒体文件的第一帧加载完毕时触发，此时整个文件还没有加载完。</li>
+<li>progress：浏览器正在下载媒体文件，周期性触发。下载信息保存在元素的buffered属性中。</li>
+<li>canplay：浏览器准备好播放，即使只有几帧，readyState属性变为CAN_PLAY。</li>
+<li>canplaythrough：浏览器认为可以不缓冲（buffering）播放时触发，即当前下载速度保持不低于播放速度，readyState属性变为CAN_PLAY_THROUGH</li>
+</ul>
+<ul>
+<li>支持事件<img src="../../public/images/html-audio-video事件.png"></li>
+</ul>
+<h3 id="tabindex属性"><a href="#tabindex属性" class="headerlink" title="tabindex属性"></a>tabindex属性</h3><ul>
+<li>如果tabindex = -1，tab键跳过当前元素。</li>
+</ul>
+<ul>
+<li><p>如果tabindex = 0，表示tab键将遍历当前元素。如果一个元素没有设置tabindex，默认值就是0。</p>
+</li>
+<li><p>如果tabindex &gt; 0，表示tab键优先遍历。值越大，就表示优先级越大</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/30/resource-front-end-tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1909,7 +2050,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
