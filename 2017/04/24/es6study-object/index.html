@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xjblog,xj" />
+  <meta name="keywords" content="es6," />
 
 
 
@@ -87,16 +87,28 @@
 
 
 
-<meta name="description" content="放下即快乐">
+<meta name="description" content="对象扩展
+注意，属性名表达式与简洁表示法，不能同时使用，会报错。
+12345678 // 报错var foo = &apos;bar&apos;;var bar = &apos;abc&apos;;var baz = &amp;#123; [foo] &amp;#125;;// 正确var foo = &apos;bar&apos;;var baz = &amp;#123; [foo]: &apos;abc&apos;&amp;#125;;
+
+注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符">
 <meta property="og:type" content="article">
-<meta property="og:title" content="artticle title">
-<meta property="og:url" content="http://yoursite.com/2017/03/23/artticle-title/index.html">
+<meta property="og:title" content="es6study">
+<meta property="og:url" content="http://yoursite.com/2017/04/24/es6study-object/index.html">
 <meta property="og:site_name" content="xuejun blog">
-<meta property="og:description" content="放下即快乐">
-<meta property="og:updated_time" content="2017-03-23T05:38:57.980Z">
+<meta property="og:description" content="对象扩展
+注意，属性名表达式与简洁表示法，不能同时使用，会报错。
+12345678 // 报错var foo = &apos;bar&apos;;var bar = &apos;abc&apos;;var baz = &amp;#123; [foo] &amp;#125;;// 正确var foo = &apos;bar&apos;;var baz = &amp;#123; [foo]: &apos;abc&apos;&amp;#125;;
+
+注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符">
+<meta property="og:updated_time" content="2017-04-24T08:20:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="artticle title">
-<meta name="twitter:description" content="放下即快乐">
+<meta name="twitter:title" content="es6study">
+<meta name="twitter:description" content="对象扩展
+注意，属性名表达式与简洁表示法，不能同时使用，会报错。
+12345678 // 报错var foo = &apos;bar&apos;;var bar = &apos;abc&apos;;var baz = &amp;#123; [foo] &amp;#125;;// 正确var foo = &apos;bar&apos;;var baz = &amp;#123; [foo]: &apos;abc&apos;&amp;#125;;
+
+注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符">
 
 
 
@@ -124,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/23/artticle-title/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/24/es6study-object/"/>
 
 
 
 
 
-  <title> artticle title | xuejun blog </title>
+  <title> es6study | xuejun blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -303,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/artticle-title/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/24/es6study-object/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XJ">
@@ -324,7 +336,7 @@
             
             
               
-                artticle title
+                es6study
               
             
           </h1>
@@ -339,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T13:38:57+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-24T15:19:19+08:00">
+                2017-04-24
               </time>
             
 
@@ -358,7 +370,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/03/23/artticle-title/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/04/24/es6study-object/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -367,7 +379,7 @@
 
           
           
-             <span id="/2017/03/23/artticle-title/" class="leancloud_visitors" data-flag-title="artticle title">
+             <span id="/2017/04/24/es6study-object/" class="leancloud_visitors" data-flag-title="es6study">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -396,7 +408,57 @@
       
 
       
-        
+        <h3 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h3><ul>
+<li><p>注意，属性名表达式与简洁表示法，不能同时使用，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// 报错</span></div><div class="line"><span class="keyword">var</span> foo = <span class="string">'bar'</span>;</div><div class="line"><span class="keyword">var</span> bar = <span class="string">'abc'</span>;</div><div class="line"><span class="keyword">var</span> baz = &#123; [foo] &#125;;</div><div class="line"></div><div class="line"><span class="comment">// 正确</span></div><div class="line"><span class="keyword">var</span> foo = <span class="string">'bar'</span>;</div><div class="line"><span class="keyword">var</span> baz = &#123; [foo]: <span class="string">'abc'</span>&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符串[object Object]，这一点要特别小心</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> keyA = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">const</span> keyB = &#123;<span class="attr">b</span>: <span class="number">2</span>&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> myObject = &#123;</div><div class="line">  [keyA]: <span class="string">'valueA'</span>,</div><div class="line">  [keyB]: <span class="string">'valueB'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">myObject <span class="comment">// Object &#123;[object Object]: "valueB"&#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>上面代码中，[keyA]和[keyB]得到的都是[object Object]，所以[keyB]会把[keyA]覆盖掉，而myObject最后只有一个[object Object]属性。</p>
+<h3 id="函数的name属性，返回函数名"><a href="#函数的name属性，返回函数名" class="headerlink" title="函数的name属性，返回函数名"></a>函数的name属性，返回函数名</h3><ul>
+<li>如果对象的方法使用了取值函数（getter）和存值函数（setter），则name属性不是在该方法上面，而是该方法的属性的描述对象的get和set属性上面，返回值是方法名前加上get和set。<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> obj = &#123;</div><div class="line">  get foo() &#123;&#125;,</div><div class="line">  set foo(x) &#123;&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">obj.foo.name</div><div class="line"><span class="comment">// TypeError: Cannot read property 'name' of undefined</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> descriptor = <span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">'foo'</span>);</div><div class="line"></div><div class="line">descriptor.get.name <span class="comment">// "get foo"</span></div><div class="line">descriptor.set.name <span class="comment">// "set foo"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>有两种特殊情况：bind方法创造的函数，name属性返回bound加上原函数的名字；Function构造函数创造的函数，name属性返回anonymous。</strong></p>
+<p> <strong>   如果对象的方法是一个 Symbol 值，那么name属性返回的是这个 Symbol 值的描述</strong></p>
+<h3 id="Object-is"><a href="#Object-is" class="headerlink" title="Object.is"></a>Object.is</h3><pre><code>它用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致。
+
+不同之处只有两个：一是+0不等于-0，二是NaN等于自身。
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">+<span class="number">0</span> === <span class="number">-0</span> <span class="comment">//true</span></div><div class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span> <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="built_in">Object</span>.is(+<span class="number">0</span>, <span class="number">-0</span>) <span class="comment">// false</span></div><div class="line"><span class="built_in">Object</span>.is(<span class="literal">NaN</span>, <span class="literal">NaN</span>) <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<h3 id="Object-assign"><a href="#Object-assign" class="headerlink" title="Object.assign"></a>Object.assign</h3><pre><code>用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> target = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">1</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> source1 = &#123; <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">2</span> &#125;;</div><div class="line"><span class="keyword">var</span> source2 = &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;;</div><div class="line"></div><div class="line"><span class="built_in">Object</span>.assign(target, source1, source2);</div><div class="line">target <span class="comment">// &#123;a:1, b:2, c:3&#125;</span></div></pre></td></tr></table></figure>
+<p>undefined和null无法转成对象，所以如果它们作为参数，就会报错。</p>
+<p>undefined和null <em>不在首参数</em> ，就不会报错</p>
+<p>其他类型的值（即数值、字符串和布尔值）不在首参数，也不会报错。但是，除了<em>字符串</em>会以数组形式，拷贝入目标对象，其他值都不会产生效果。</p>
+<ul>
+<li>Object.assign方法实行的是浅拷贝，而不是深拷贝。也就是说，如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个对象的引用。</li>
+<li>一旦遇到同名属性，Object.assign的处理方法是替换，而不是添加。</li>
+<li><p>注意，Object.assign可以用来处理数组，但是会把数组视为对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.assign([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>])</div><div class="line"><span class="comment">// [4, 5, 3]</span></div></pre></td></tr></table></figure>
+<p>  ES5有三个操作会忽略enumerable为false的属性。</p>
+<pre><code>for...in循环：只遍历对象自身的和继承的可枚举的属性
+Object.keys()：返回对象自身的所有可枚举的属性的键名
+JSON.stringify()：只串行化对象自身的可枚举的属性
+</code></pre><p>  ES6新增了一个操作Object.assign()，会忽略enumerable为false的属性</p>
+</li>
+</ul>
+<h3 id="属性的遍历"><a href="#属性的遍历" class="headerlink" title="属性的遍历"></a>属性的遍历</h3><ul>
+<li>for…in循环遍历对象自身的和继承的可枚举属性（不含Symbol属性）</li>
+<li>Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含Symbol属性）</li>
+<li>Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含Symbol属性，但是包括不可枚举属性）</li>
+<li>Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有Symbol属性</li>
+<li>Reflect.ownKeys返回一个数组，包含对象自身的所有属性，不管是属性名是Symbol或字符串，也不管是否可枚举</li>
+</ul>
+<p>规则：</p>
+<pre><code>首先遍历所有属性名为数值的属性，按照数字排序。
+其次遍历所有属性名为字符串的属性，按照生成时间排序。
+最后遍历所有属性名为Symbol值的属性，按照生成时间排序。
+</code></pre><p>_proto__属性（前后各两个下划线），用来读取或设置当前对象的prototype对象  <em>不建议使用</em></p>
+<p>Object.setPrototypeOf()（写操作）、Object.getPrototypeOf()（读操作）、Object.create()（生成操作）</p>
+
       
     </div>
 
@@ -423,6 +485,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/es6/" rel="tag"># es6</a>
+          
+        </div>
+      
 
       
         
@@ -432,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/04/17/html-audio-video-ps/" rel="next" title="html-audio-video-ps">
+                <i class="fa fa-chevron-left"></i> html-audio-video-ps
               </a>
             
           </div>
@@ -441,10 +509,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/29/study/" rel="prev" title="study">
-                study <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -596,6 +669,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象扩展"><span class="nav-number">1.</span> <span class="nav-text">对象扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数的name属性，返回函数名"><span class="nav-number">2.</span> <span class="nav-text">函数的name属性，返回函数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-is"><span class="nav-number">3.</span> <span class="nav-text">Object.is</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-assign"><span class="nav-number">4.</span> <span class="nav-text">Object.assign</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性的遍历"><span class="nav-number">5.</span> <span class="nav-text">属性的遍历</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
