@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[es6study_module]]></title>
+      <url>%2F2017%2F05%2F16%2Fes6study-module%2F</url>
+      <content type="text"><![CDATA[module 严格模式 变量必须声明后再使用 函数的参数不能有同名属性，否则报错 不能使用with语句 不能对只读属性赋值，否则报错 不能使用前缀0表示八进制数，否则报错 不能删除不可删除的属性，否则报错 不能删除变量delete prop，会报错，只能删除属性delete global[prop] eval不会在它的外层作用域引入变量 eval和arguments不能被重新赋值 arguments不会自动反映函数参数的变化 不能使用arguments.callee 不能使用arguments.caller 禁止this指向全局对象 不能使用fn.caller和fn.arguments获取函数调用的堆栈增加了保留字（比如protected、static和interface） export 通常情况下，export输出的变量就是本来的名字，但是可以使用as关键字重命名变量可以声明多次 export语句输出的接口，与其对应的值是动态绑定关系，即通过该接口，可以取到模块内部实时的值import import命令接受一对大括号，里面指定要从其他模块导入的变量名。大括号里面的变量名，必须与被导入模块对外接口的名称相同。 可以使用as重命名 默认输出12345678910111213// 第一组export default function crc32() &#123; // 输出 // ...&#125;import crc32 from 'crc32'; // 输入// 第二组export function crc32() &#123; // 输出 // ...&#125;;import &#123;crc32&#125; from 'crc32'; // 输入 第一组是使用export default时，对应的import语句不需要使用大括号；第二组是不使用export default时，对应的import语句需要使用大括号 export default命令用于指定模块的默认输出。显然，一个模块只能有一个默认输出，因此export default命令只能使用一次。所以，import命令后面才不用加大括号，因为只可能对应一个方法。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[es6study-setandMap]]></title>
       <url>%2F2017%2F04%2F25%2Fes6study-setandMap%2F</url>
       <content type="text"><![CDATA[Set 没有键名 内容不重复 通过add添加 向Set加入值的时候，不会发生类型转换 Set内部判断两个值是否不同，使用的算法叫做“Same-value equality”，它类似于精确相等运算符（===），主要的区别是NaN等于自身，而精确相等运算符认为NaN不等于自身。 两个对象总是不相等的 属性 Set.prototype.constructor：构造函数，默认就是Set函数。 Set.prototype.size：返回Set实例的成员总数。 操作方法add(value)：添加某个值，返回Set结构本身。 delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。 has(value)：返回一个布尔值，表示该值是否为Set的成员。 clear()：清除所有成员，没有返回值 Array.from方法可以将 Set 结构转为数组。 1234//去重算法function dedupe(array) &#123; return Array.from(new Set(array));&#125; 遍历方法keys()：返回键名的遍历器 values()：返回键值的遍历器 entries()：返回键值对的遍历器 forEach()：使用回调函数遍历每个成员 WeakSet 成员只能是对象 弱引用 无遍历 MapMap 的键是一个简单类型的值（数字、字符串、布尔值），则只要两个值严格相等，Map 将其视为一个键，包括0和-0，布尔值true和字符串true则是两个不同的键。另外，undefined和null也是两个不同的键。虽然NaN不严格相等于自身，但 Map 将其视为同一个键。 属性、操作方法 size属性 set(key, value) get(key) has(key) delete(key) clear()遍历方法 keys()：返回键名的遍历器。 values()：返回键值的遍历器。 entries()：返回所有成员的遍历器。 forEach()：遍历 Map 的所有成员。weakmap 只接受对象作键名 弱引用 无遍历]]></content>

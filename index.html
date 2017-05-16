@@ -304,6 +304,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/16/es6study-module/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xuejun blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/16/es6study-module/" itemprop="url">
+                  es6study_module
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-16T12:57:41+08:00">
+                2017-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/16/es6study-module/" class="leancloud_visitors" data-flag-title="es6study_module">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://es6.ruanyifeng.com/?search=e&amp;x=0&amp;y=0#docs/module" target="_blank" rel="external">module</a></p>
+<h2 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h2><ul>
+<li>变量必须声明后再使用</li>
+<li>函数的参数不能有同名属性，否则报错</li>
+<li>不能使用with语句</li>
+<li>不能对只读属性赋值，否则报错</li>
+<li>不能使用前缀0表示八进制数，否则报错</li>
+<li>不能删除不可删除的属性，否则报错</li>
+<li>不能删除变量delete prop，会报错，只能删除属性delete global[prop]</li>
+<li>eval不会在它的外层作用域引入变量</li>
+<li>eval和arguments不能被重新赋值</li>
+<li>arguments不会自动反映函数参数的变化</li>
+<li>不能使用arguments.callee</li>
+<li>不能使用arguments.caller</li>
+<li>禁止this指向全局对象</li>
+<li>不能使用fn.caller和fn.arguments获取函数调用的堆栈<br>增加了保留字（比如protected、static和interface）</li>
+</ul>
+<h2 id="export"><a href="#export" class="headerlink" title="export"></a>export</h2><ul>
+<li>通常情况下，export输出的变量就是本来的名字，但是可以使用as关键字重命名<em>变量可以声明多次</em></li>
+<li>export语句输出的接口，与其对应的值是动态绑定关系，即通过该接口，可以取到模块内部<em>实时</em>的值<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2></li>
+<li>import命令接受一对大括号，里面指定要从其他模块导入的变量名。大括号里面的变量名，必须与被导入模块对外接口的名称相同。</li>
+<li>可以使用as重命名</li>
+</ul>
+<h2 id="默认输出"><a href="#默认输出" class="headerlink" title="默认输出"></a>默认输出</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 第一组</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">crc32</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 输出</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">import</span> crc32 <span class="keyword">from</span> <span class="string">'crc32'</span>; <span class="comment">// 输入</span></div><div class="line"></div><div class="line"><span class="comment">// 第二组</span></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">crc32</span>(<span class="params"></span>) </span>&#123; <span class="comment">// 输出</span></div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;crc32&#125; <span class="keyword">from</span> <span class="string">'crc32'</span>; <span class="comment">// 输入</span></div></pre></td></tr></table></figure>
+<pre><code>第一组是使用export default时，对应的import语句不需要使用大括号；第二组是不使用export default时，对应的import语句需要使用大括号
+</code></pre><ul>
+<li>export default命令用于指定模块的默认输出。显然，一个模块<em>只能有一个</em>默认输出，因此export default命令只能使用一次。所以，import命令后面才不用加大括号，因为只可能对应一个方法。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/es6study-setandMap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1505,7 +1664,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
