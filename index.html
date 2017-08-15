@@ -305,6 +305,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/xmlrpcStudy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xuejun blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/15/xmlrpcStudy/" itemprop="url">
+                  xmlrpcStudy
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T09:12:35+08:00">
+                2017-08-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/15/xmlrpcStudy/" class="leancloud_visitors" data-flag-title="xmlrpcStudy">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="xmlRpc的学习和使用"><a href="#xmlRpc的学习和使用" class="headerlink" title="xmlRpc的学习和使用"></a>xmlRpc的学习和使用</h2><ul>
+<li>基于nodejs</li>
+</ul>
+<ul>
+<li>对接supervisord的rpc服务</li>
+</ul>
+<h3 id="使用github开源xmlrpc库"><a href="#使用github开源xmlrpc库" class="headerlink" title="使用github开源xmlrpc库"></a>使用github开源xmlrpc库</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xmlrpc = <span class="built_in">require</span>(<span class="string">'xmlrpc'</span>),</div><div class="line">Url = <span class="built_in">require</span>(<span class="string">'url'</span>);</div></pre></td></tr></table></figure>
+<h3 id="主要封装代码"><a href="#主要封装代码" class="headerlink" title="主要封装代码"></a>主要封装代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">api</span>(<span class="params">host</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> hostParts = &#123;&#125;;</div><div class="line">        </div><div class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> host == <span class="string">'string'</span>)</div><div class="line">  &#123;</div><div class="line">      <span class="keyword">if</span> (host.indexOf(<span class="string">'unix'</span>) === <span class="number">0</span>) &#123;</div><div class="line"></div><div class="line">          hostParts.socketPath = Url.parse(host).pathname;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">if</span> (host.indexOf(<span class="string">'http'</span>) !== <span class="number">0</span>) &#123;</div><div class="line">              host = <span class="string">'http://'</span> + host;</div><div class="line">          &#125;</div><div class="line">          hostParts = Url.parse(host);</div><div class="line">      </div><div class="line">          <span class="keyword">if</span>(hostParts.auth)</div><div class="line">          &#123;</div><div class="line">              <span class="keyword">var</span> authParts = hostParts.auth.split(<span class="string">':'</span>);</div><div class="line">              hostParts.user = authParts[<span class="number">0</span>];</div><div class="line">              hostParts.pass = authParts[<span class="number">1</span>];</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(host)</div><div class="line">  &#123;</div><div class="line">      hostParts = host;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">if</span>(!hostParts.hostname) hostParts.hostname = <span class="string">'localhost'</span>;</div><div class="line">  <span class="keyword">if</span>(!hostParts.port) hostParts.port = <span class="number">9001</span>;</div><div class="line">  </div><div class="line">  <span class="keyword">if</span>(hostParts.socketPath)&#123;</div><div class="line">      <span class="keyword">this</span>.client = xmlrpc.createClient(&#123;</div><div class="line">          <span class="attr">socketPath</span>: hostParts.socketPath,</div><div class="line">          <span class="attr">path</span>: <span class="string">'/RPC2'</span>,</div><div class="line">      &#125;);</div><div class="line">  &#125;<span class="keyword">else</span>&#123;</div><div class="line">      <span class="keyword">this</span>.client = xmlrpc.createClient(&#123;</div><div class="line">          <span class="attr">host</span>: hostParts.hostname,</div><div class="line">          <span class="attr">port</span>: hostParts.port,</div><div class="line">          <span class="attr">path</span>: <span class="string">'/RPC2'</span>,</div><div class="line">          <span class="attr">basic_auth</span>: &#123;</div><div class="line">              <span class="attr">user</span>: hostParts.user,</div><div class="line">              <span class="attr">pass</span>: hostParts.pass</div><div class="line">          &#125;</div><div class="line">      &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">api.prototype._call = <span class="function"><span class="keyword">function</span>(<span class="params">method, args, callback</span>)</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">this</span>.client.methodCall(method, args, callback);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">[<span class="string">'supervisor.addProcessGroup'</span>,</div><div class="line">  <span class="string">'supervisor.clearAllProcessLogs'</span>,</div><div class="line">  <span class="string">'supervisor.clearLog'</span>,</div><div class="line">  <span class="string">'supervisor.clearProcessLog'</span>,</div><div class="line">  <span class="string">'supervisor.clearProcessLogs'</span>,</div><div class="line">  <span class="string">'supervisor.getAPIVersion'</span>,</div><div class="line">  <span class="string">'supervisor.getAllConfigInfo'</span>,</div><div class="line">  <span class="string">'supervisor.getAllProcessInfo'</span>,</div><div class="line">  <span class="string">'supervisor.getIdentification'</span>,</div><div class="line">  <span class="string">'supervisor.getPID'</span>,</div><div class="line">  <span class="string">'supervisor.getProcessInfo'</span>,</div><div class="line">  <span class="string">'supervisor.getState'</span>,</div><div class="line">  <span class="string">'supervisor.getSupervisorVersion'</span>,</div><div class="line">  <span class="string">'supervisor.getVersion'</span>,</div><div class="line">  <span class="string">'supervisor.readLog'</span>,</div><div class="line">  <span class="string">'supervisor.readMainLog'</span>,</div><div class="line">  <span class="string">'supervisor.readProcessLog'</span>,</div><div class="line">  <span class="string">'supervisor.readProcessStderrLog'</span>,</div><div class="line">  <span class="string">'supervisor.readProcessStdoutLog'</span>,</div><div class="line">  <span class="string">'supervisor.reloadConfig'</span>,</div><div class="line">  <span class="string">'supervisor.removeProcessGroup'</span>,</div><div class="line">  <span class="string">'supervisor.restart'</span>,</div><div class="line">  <span class="string">'supervisor.sendProcessStdin'</span>,</div><div class="line">  <span class="string">'supervisor.sendRemoteCommEvent'</span>,</div><div class="line">  <span class="string">'supervisor.signalProcess'</span>,</div><div class="line">  <span class="string">'supervisor.signalProcessGroup'</span>,</div><div class="line">  <span class="string">'supervisor.shutdown'</span>,</div><div class="line">  <span class="string">'supervisor.startAllProcesses'</span>,</div><div class="line">  <span class="string">'supervisor.startProcess'</span>,</div><div class="line">  <span class="string">'supervisor.startProcessGroup'</span>,</div><div class="line">  <span class="string">'supervisor.stopAllProcesses'</span>,</div><div class="line">  <span class="string">'supervisor.stopProcess'</span>,</div><div class="line">  <span class="string">'supervisor.stopProcessGroup'</span>,</div><div class="line">  <span class="string">'supervisor.tailProcessLog'</span>,</div><div class="line">  <span class="string">'supervisor.tailProcessStderrLog'</span>,</div><div class="line">  <span class="string">'supervisor.tailProcessStdoutLog'</span>,</div><div class="line">  <span class="string">'system.listMethods'</span>,</div><div class="line">  <span class="string">'system.methodHelp'</span>,</div><div class="line">  <span class="string">'system.methodSignature'</span>,</div><div class="line">  <span class="string">'system.multicall'</span>].forEach(<span class="function"><span class="keyword">function</span>(<span class="params">property</span>)</span>&#123;</div><div class="line">  api.prototype[property.split(<span class="string">'.'</span>).pop()] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">    callback = args.pop();</div><div class="line">    <span class="keyword">this</span>._call(property, args, callback);</div><div class="line">  &#125;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = api;</div></pre></td></tr></table></figure>
+<h3 id="业务代码调用"><a href="#业务代码调用" class="headerlink" title="业务代码调用"></a>业务代码调用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> client = supervisord.connect(<span class="string">'http://用户名:密码@Ip:端口'</span>);</div><div class="line"></div><div class="line">app.get(<span class="string">'/test'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</div><div class="line">    client.getAllProcessInfo(<span class="function"><span class="keyword">function</span> (<span class="params">err, result</span>) </span>&#123;</div><div class="line">        res.send(result);</div><div class="line">    &#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/18/cssSkill/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1623,146 +1762,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="XJ">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xuejun blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/23/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T13:32:02+08:00">
-                2017-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/03/23/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1805,7 +1811,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1818,7 +1824,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
