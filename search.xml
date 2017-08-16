@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[es6ps]]></title>
       <url>%2F2017%2F08%2F16%2Fes6ps%2F</url>
-      <content type="text"><![CDATA[es6 注意点12// 注意花括号：抓取命名导出，而不是默认导出import &#123; App &#125; from './App' default 默认export 不使用花括号import1import ConnectedApp, &#123; App &#125; from './App']]></content>
+      <content type="text"><![CDATA[es6 注意点12// 注意花括号：抓取命名导出，而不是默认导出import &#123; App &#125; from './App' default 默认export 不使用花括号import1import ConnectedApp, &#123; App &#125; from './App' 混用 ES6 模块和 CommonJS 的注意事项如果在应用代码中使用 ES6，但在测试中使用 ES5，Babel 会通过其 interop 的机制处理 ES6 的 import 和 CommonJS 的 require 的转换，使这两个模块的格式各自运作，但其行为依旧有细微的区别。 如果在默认导出的附近增加另一个导出，将导致无法默认导出 require(&apos;./App&apos;)。此时，应代以 require(&apos;./App&apos;).default 。]]></content>
     </entry>
 
     
