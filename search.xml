@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[react-route-study]]></title>
+      <url>%2F2017%2F08%2F28%2Freact-route-study%2F</url>
+      <content type="text"><![CDATA[路径语法路由路径是匹配一个（或一部分）URL 的 一个字符串模式。大部分的路由路径都可以直接按照字面量理解，除了以下几个特殊的符号： :paramName – 匹配一段位于 /、? 或 # 之后的 URL。 命中的部分将被作为一个参数 () – 在它内部的内容被认为是可选的 * – 匹配任意字符（非贪婪的）直到命中下一个字符或者整个 URL 的末尾，并创建一个 splat 参数 123&lt;Route path="/hello/:name"&gt; // 匹配 /hello/michael 和 /hello/ryan&lt;Route path="/hello(/:name)"&gt; // 匹配 /hello, /hello/michael 和 /hello/ryan&lt;Route path="/files/*.*"&gt; // 匹配 /files/hello.jpg 和 /files/path/to/hello.jpg 如果一个路由使用了相对路径，那么完整的路径将由它的所有祖先节点的路径和自身指定的相对路径拼接而成。使用绝对路径可以使路由匹配行为忽略嵌套关系。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[redux_study]]></title>
+      <url>%2F2017%2F08%2F23%2Fredux-study%2F</url>
+      <content type="text"><![CDATA[state注意通常情况下，通过 preloadedState 指定的 state 要优先于通过 reducer 指定 state。这样可以使通过 reducer 默认参数指定初始数据显得更加的合理，并且当你从一些持久化的存储器或服务器更新 store 的时候，允许你更新已存在的数据（全部或者部分） 初始化state 可以使用 createStore 方法中的第二个可选参数 preloadedState 也可以在 reducer 中为 undefined 的 state 参数指定的默认的初始值。这个可以通过在 reducer 中添加一个明确的检查来完成，也可以使用 ES6 中默认参数的语法 function myReducer(state = someDefaultValue, action) state 初值 优先选择通过 preloadedState 参数传到 createStore() 的对象中的相应值，但是如果你不传任何东西，或者没设置相应的字段，那么 reducer 就会选择指定的默认 state 参数来取代]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[es6ps]]></title>
       <url>%2F2017%2F08%2F16%2Fes6ps%2F</url>
       <content type="text"><![CDATA[es6 注意点12// 注意花括号：抓取命名导出，而不是默认导出import &#123; App &#125; from './App' default 默认export 不使用花括号import1import ConnectedApp, &#123; App &#125; from './App' 混用 ES6 模块和 CommonJS 的注意事项如果在应用代码中使用 ES6，但在测试中使用 ES5，Babel 会通过其 interop 的机制处理 ES6 的 import 和 CommonJS 的 require 的转换，使这两个模块的格式各自运作，但其行为依旧有细微的区别。 如果在默认导出的附近增加另一个导出，将导致无法默认导出 require(&apos;./App&apos;)。此时，应代以 require(&apos;./App&apos;).default 。]]></content>
