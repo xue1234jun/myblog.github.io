@@ -392,8 +392,8 @@
 
       
         
-          
-            <h3 id="路径语法"><a href="#路径语法" class="headerlink" title="路径语法"></a>路径语法</h3><pre><code>路由路径是匹配一个（或一部分）URL 的 一个字符串模式。大部分的路由路径都可以直接按照字面量理解，除了以下几个特殊的符号：
+          <p>react-route 3</p>
+<h3 id="路径语法"><a href="#路径语法" class="headerlink" title="路径语法"></a>路径语法</h3><pre><code>路由路径是匹配一个（或一部分）URL 的 一个字符串模式。大部分的路由路径都可以直接按照字面量理解，除了以下几个特殊的符号：
 
 :paramName – 匹配一段位于 /、? 或 # 之后的 URL。 命中的部分将被作为一个参数
 () – 在它内部的内容被认为是可选的
@@ -401,7 +401,13 @@
 </code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Route path=<span class="string">"/hello/:name"</span>&gt;         <span class="comment">// 匹配 /hello/michael 和 /hello/ryan</span></div><div class="line">&lt;Route path=<span class="string">"/hello(/:name)"</span>&gt;       <span class="comment">// 匹配 /hello, /hello/michael 和 /hello/ryan</span></div><div class="line">&lt;Route path=<span class="string">"/files/*.*"</span>&gt;           <span class="comment">// 匹配 /files/hello.jpg 和 /files/path/to/hello.jpg</span></div></pre></td></tr></table></figure>
 <pre><code>如果一个路由使用了相对路径，那么完整的路径将由它的所有祖先节点的路径和自身指定的相对路径拼接而成。使用绝对路径可以使路由匹配行为忽略嵌套关系。
 </code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/react-route-study/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
