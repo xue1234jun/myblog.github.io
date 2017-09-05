@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xjblog,xj" />
+  <meta name="keywords" content="Tips," />
 
 
 
@@ -87,16 +87,18 @@
 
 
 
-<meta name="description" content="放下即快乐">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xuejun blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/2/index.html">
+<meta name="description" content="call/applycall 第二个参数任意值 apply 第二参数为数组 检测变量类型Object.prototype.toString.call(obj) 小函数1234567891011121314151617181920212223242526272829//判断type    function type(obj) &amp;#123;        var t;        if (obj =">
+<meta name="keywords" content="Tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jsTips">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/jsTips/index.html">
 <meta property="og:site_name" content="xuejun blog">
-<meta property="og:description" content="放下即快乐">
+<meta property="og:description" content="call/applycall 第二个参数任意值 apply 第二参数为数组 检测变量类型Object.prototype.toString.call(obj) 小函数1234567891011121314151617181920212223242526272829//判断type    function type(obj) &amp;#123;        var t;        if (obj =">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-05T02:51:34.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xuejun blog">
-<meta name="twitter:description" content="放下即快乐">
+<meta name="twitter:title" content="jsTips">
+<meta name="twitter:description" content="call/applycall 第二个参数任意值 apply 第二参数为数组 检测变量类型Object.prototype.toString.call(obj) 小函数1234567891011121314151617181920212223242526272829//判断type    function type(obj) &amp;#123;        var t;        if (obj =">
 
 
 
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/05/jsTips/"/>
 
 
 
 
 
-  <title> 归档 | xuejun blog </title>
+  <title> jsTips | xuejun blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -165,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,218 +295,207 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 15 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/jsTips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xuejun blog">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jsTips
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T10:48:07+08:00">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/05/jsTips/" class="leancloud_visitors" data-flag-title="jsTips">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <h3 id="call-apply"><a href="#call-apply" class="headerlink" title="call/apply"></a>call/apply</h3><pre><code>call 第二个参数任意值
+apply 第二参数为数组
+</code></pre><h3 id="检测变量类型"><a href="#检测变量类型" class="headerlink" title="检测变量类型"></a>检测变量类型</h3><pre><code>Object.prototype.toString.call(obj)
+</code></pre><h3 id="小函数"><a href="#小函数" class="headerlink" title="小函数"></a>小函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//判断type</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> t;</div><div class="line">        <span class="keyword">if</span> (obj == <span class="literal">null</span>) &#123;</div><div class="line">            t = <span class="built_in">String</span>(obj);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            t = <span class="built_in">Object</span>.prototype.toString.call(obj).toLowerCase();</div><div class="line">            t = t.substring(<span class="number">8</span>, t.length - <span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> t;</div><div class="line">    &#125;</div><div class="line"><span class="comment">//each</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">each</span>(<span class="params">obj, iterator, context</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">'object'</span>) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> i, l, t = type(obj);</div><div class="line">        context = context || obj;</div><div class="line">        <span class="keyword">if</span> (t === <span class="string">'array'</span> || t === <span class="string">'arguments'</span> || t === <span class="string">'nodelist'</span>) &#123;</div><div class="line">            <span class="keyword">for</span> (i = <span class="number">0</span>, l = obj.length; i &lt; l; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (iterator.call(context, obj[i], i, obj) === <span class="literal">false</span>) <span class="keyword">return</span>;</div><div class="line">            &#125;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">for</span> (i <span class="keyword">in</span> obj) &#123;</div><div class="line">                <span class="keyword">if</span> (obj.hasOwnProperty(i)) &#123;</div><div class="line">                    <span class="keyword">if</span> (iterator.call(context, obj[i], i, obj) === <span class="literal">false</span>) <span class="keyword">return</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tips/" rel="tag"># Tips</a>
+          
         </div>
       
+
+      
+        
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/28/react-route-study/" rel="next" title="react-route-study">
+                <i class="fa fa-chevron-left"></i> react-route-study
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/17/html-audio-video-ps/" itemprop="url">
-              
-                <span itemprop="name">html-audio-video-ps</span>
-              
-            </a>
-        
-      </h1>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-17T13:26:29+08:00"
-              content="2017-04-17" >
-          04-17
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
         
-            <a class="post-title-link" href="/2017/03/30/resource-front-end-tutorial/" itemprop="url">
-              
-                <span itemprop="name">resource_front_end_tutorial</span>
-              
-            </a>
-        
-      </h1>
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-30T08:47:14+08:00"
-              content="2017-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/29/study/" itemprop="url">
-              
-                <span itemprop="name">study</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-29T13:50:03+08:00"
-              content="2017-03-29" >
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/23/artticle-title/" itemprop="url">
-              
-                <span itemprop="name">artticle title</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-23T13:38:57+08:00"
-              content="2017-03-23" >
-          03-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/23/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-23T13:32:02+08:00"
-              content="2017-03-23" >
-          03-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -512,6 +503,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -531,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -595,6 +601,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#call-apply"><span class="nav-number">1.</span> <span class="nav-text">call/apply</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检测变量类型"><span class="nav-number">2.</span> <span class="nav-text">检测变量类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小函数"><span class="nav-number">3.</span> <span class="nav-text">小函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -705,11 +727,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   
@@ -743,6 +763,10 @@
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2141589"></script>
+      <!-- UY END -->
     
   
 
